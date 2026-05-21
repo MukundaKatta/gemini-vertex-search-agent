@@ -1,0 +1,29 @@
+[project]
+name = "gemini-vertex-search-agent"
+version = "0.1.0"
+description = "Enterprise document Q&A agent on Google Cloud Agent Builder (ADK) + Gemini 2.5 + Vertex AI Search (Discovery Engine)."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Mukunda Katta" }]
+requires-python = ">=3.10"
+dependencies = [
+    "google-adk>=1.0.0",
+    "google-cloud-aiplatform[agent_engines]>=1.112.0",
+    "google-cloud-discoveryengine>=0.13.0",
+    "mcp>=1.0.0",
+    "streamlit>=1.40.0",
+    "pandas>=2.2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/MukundaKatta/gemini-vertex-search-agent"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
